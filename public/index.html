@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.4.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.4.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins:ital@1&display=swap');      
+#crewMain{
+        display: grid;
+    
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(1,1fr);
+      
+        justify-content: center;
+        gap: 10px;
+      }
+      header{
+        margin: 5px;
+      }
+      img{
+        max-width: 216px;
+        width: 100%;
+        height: auto;
+      }
+    .crew{
+      position: relative;
+      margin: 10px;
+    }
+    .crew:nth-child(2),.crew:nth-child(4),.crew:nth-child(6){
+      margin-top:30px ;
+    }
+    .profesion{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size:10px;
+    width: 130px;
+    height: 11px;
+    position: absolute;
+    top: 50px;
+    right:-55%;
+    transform: rotate(90deg);
+  }
+
+  h2{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Poppins";
+    line-height: 21px;
+  }
+  header h3{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+margin-left:12px ;
+  }
+  header h1{
+    font-family: 'PT Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 48px;
+letter-spacing: -0.045em;
+  }
+    p{
+      font-family: 'Poppins';
+      font-size: 14px;
+      line-height: 21px;
+      font-style: normal;
+      font-weight: 400;
+      color: black;
+      margin-left:12px ;
+      margin-right: 30px;
+      text-align: justify;
+    }
+   
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer p{
+      font-family: Montserrat;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 17px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #A9A9A9;
+    }
+ @media (min-width: 576px) {
+  header{
+    display: grid;
+  grid-template-columns: repeat(2 ,350px);
+    justify-content: center;
+    margin-top: 100px;
+  }
+ 
+ 
+    #crewMain{
+        display: grid;
+    
+        grid-template-columns: repeat(3,minmax(250px,300px));
+        grid-template-rows: repeat(1,1fr);
+      
+        justify-content: center;
+        align-items: center;
+
+      }
+    
+      .profesion{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size:12px;
+    width: 130px;
+    height: 11px;
+    position: absolute;
+    top: 50px;
+    right:-25%;
+    transform: rotate(90deg);
+  }
+  .crew:nth-child(2),.crew:nth-child(5){
+      margin-top:70px ;
+    }
+
+    @media (min-width: 768px) {
+ 
+    
+      .profesion{
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size:12px;
+    width: 130px;
+    height: 11px;
+    position: absolute;
+    top: 50px;
+    right:-60px;
+    transform: rotate(90deg);
+  }
+
+  
+  }
+  @media (min-width: 1024px) {
+ 
+    
+ .profesion{
+font-family: 'PT Serif';
+font-style: normal;
+font-weight: 400;
+font-size:12px;
+width: 130px;
+height: 11px;
+position: absolute;
+top: 50px;
+right:-20px;
+transform: rotate(90deg);
+}
+
+
+}
+    </style>
+  </heade>
+  <body>
+    <header>
+      <div><h1>The creative crew</h1></div>
+     <div> 
+       <h3>WHO WE ARE</h3 >
+      <p>We are team of creatively diverse.  driven.  innovative individuals working in various locations from the world.</p>
+    </div>
+    </header>
+  <main id="crewMain">
+    
+<div class="crew">
+<img src="image_my_team/photo1.png" alt="">
+<h3 class="profesion">PRODUCT OWNER</h3 >
+
+<h2>Bill Mahoney</h2>
+</div>
+<div class="crew"> <h3 class="profesion">ART DIRECTOR</h3  ><img src="image_my_team/photo2.png" alt="">
+  
+<h2>Saba Cabrera</h2></div>
+<div class="crew"> <h3 class="profesion">TECH LEAD</h3   ><img src="image_my_team/photo3.png" alt="">
+<h2>Shae Le</h2></div>
+<div class="crew"><h3 class="profesion">UX DESIGNER</h3  ><img src="image_my_team/photo4.png" alt=""> <h2>Skylah Lu</h2></div>
+<div class="crew"><h3 class="profesion">DEVELOPER</h3  ><img src="image_my_team/photo5.png" alt=""> <h2>Griff Richards</h2></div>
+<div class="crew"><h3 class="profesion">DEVELOPER</h3  ><img src="image_my_team/photo6.png" alt=""><h2>Stan John</h2></div>
+
+  </main>
+<footer><p>created by tovarapvp-devChallenges.io</p></footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
